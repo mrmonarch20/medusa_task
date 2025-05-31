@@ -1,0 +1,33 @@
+# AWS Region
+aws_region = "us-east-1"
+
+# Environment
+environment = "dev"
+
+# VPC Configuration
+vpc_cidr = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+public_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_subnets = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+database_subnets = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+
+# Database Configuration
+db_name = "medusa"
+db_username = "postgres"
+db_password = "your-secure-password" # Change this!
+db_instance_class = "db.t3.small"
+
+# Redis Configuration
+redis_node_type = "cache.t3.small"
+
+# ECS Configuration
+ecs_task_cpu = 2048
+ecs_task_memory = 4096
+
+# Docker Images
+# Use the full ECR URL or Docker Hub image name
+medusa_server_image = "123456789012.dkr.ecr.us-east-1.amazonaws.com/dev-medusa-server:latest"
+medusa_storefront_image = "123456789012.dkr.ecr.us-east-1.amazonaws.com/dev-medusa-storefront:latest"
+# Or for Docker Hub:
+# medusa_server_image = "your-dockerhub-username/medusa-server:latest"
+# medusa_storefront_image = "your-dockerhub-username/medusa-storefront:latest"
