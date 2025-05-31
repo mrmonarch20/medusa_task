@@ -9,10 +9,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "medusa-terraform-state"
-    key            = "medusa/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform-lock"
+    bucket = "medusa-terraform-state-us-east-1"
+    key    = "medusa/terraform.tfstate"
+    region = "us-east-1"
+    encrypt = true
   }
 }
