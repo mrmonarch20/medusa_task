@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "medusa-terraform-state-us-east-1"
+    bucket = "pearl-bucketzz"
     key    = "medusa/terraform.tfstate"
     region = "us-east-1"
     encrypt = true
