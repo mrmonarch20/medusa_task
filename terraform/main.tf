@@ -62,7 +62,7 @@ module "ecs" {
   db_host                 = module.database.db_instance_address
   db_name                 = var.db_name
   db_username             = var.db_username
-  db_password             = var.db_password
+  db_password             = var.db_password.db_password.result
   
   medusa_server_image     = var.medusa_server_image
   medusa_storefront_image = var.medusa_storefront_image
